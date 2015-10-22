@@ -78,7 +78,7 @@ android {
     buildConfigField "String", "GIT_SHA", "\"${gitSha}\""
     buildConfigField "String", "BUILD_TIME", "\"${buildTime}\""
 
-    testInstrumentationRunner "com.jakewharton.u2020.U2020TestRunner"
+    testInstrumentationRunner "com.monkeysarmy.fit.U2020TestRunner"
   }
 
   buildTypes {

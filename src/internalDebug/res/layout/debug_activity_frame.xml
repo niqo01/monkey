@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.jakewharton.u2020.ui.debug.DebugDrawerLayout
+<com.monkeysarmy.fit.ui.debug.DebugDrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/debug_drawer_layout"
@@ -26,7 +26,7 @@
           />
     </com.jakewharton.madge.MadgeFrameLayout>
   </com.mattprecious.telescope.TelescopeLayout>
-  <com.jakewharton.u2020.ui.debug.NonConsumingScrimInsetsFrameLayout
+  <com.monkeysarmy.fit.ui.debug.NonConsumingScrimInsetsFrameLayout
       android:layout_width="290dp"
       android:layout_height="match_parent"
       android:layout_gravity="end"
@@ -41,5 +41,5 @@
         android:fitsSystemWindows="true"
         android:clipToPadding="false"
         />
-  </com.jakewharton.u2020.ui.debug.NonConsumingScrimInsetsFrameLayout>
-</com.jakewharton.u2020.ui.debug.DebugDrawerLayout>
+  </com.monkeysarmy.fit.ui.debug.NonConsumingScrimInsetsFrameLayout>
+</com.monkeysarmy.fit.ui.debug.DebugDrawerLayout>

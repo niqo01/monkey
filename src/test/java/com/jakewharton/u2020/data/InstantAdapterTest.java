@@ -1,4 +1,4 @@
-package com.jakewharton.u2020.data;
+package com.monkeysarmy.fit.data;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
