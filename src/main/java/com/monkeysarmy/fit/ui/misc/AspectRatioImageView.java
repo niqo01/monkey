@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 
 import static android.view.View.MeasureSpec.EXACTLY;
 

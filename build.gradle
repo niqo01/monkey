@@ -58,10 +58,10 @@ android {
   }
 
   signingConfigs {
-    monkey {
-      storeFile file('debug.keystore')
+    debug {
+      storeFile rootProject.file('debug.keystore')
       storePassword 'android'
-      keyAlias 'android'
+      keyAlias 'androiddebugkey'
       keyPassword 'android'
     }
   }
@@ -73,7 +73,7 @@ android {
     versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
     versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
-    signingConfig signingConfigs.monkey
+    signingConfig signingConfigs.debug
 
     buildConfigField "String", "GIT_SHA", "\"${gitSha}\""
     buildConfigField "String", "BUILD_TIME", "\"${buildTime}\""
@@ -84,6 +84,7 @@ android {
   buildTypes {
     debug {
       applicationIdSuffix '.debug'
+      signingConfig signingConfigs.debug
     }
   }
 
@@ -100,6 +101,8 @@ android {
     textReport true
     textOutput 'stdout'
     fatal 'UnusedResources'
+    lintConfig file("lint.xml")
+    abortOnError false
   }
 
   compileOptions {

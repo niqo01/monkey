@@ -18,9 +18,7 @@ import retrofit.RxJavaCallAdapterFactory;
     library = true,
     injects = {
         OauthService.class
-    }
-)
-public final class ApiModule {
+    }) public final class ApiModule {
   public static final HttpUrl PRODUCTION_API_URL = HttpUrl.parse("https://api.github.com");
 
   @Provides @Singleton HttpUrl provideBaseUrl() {
@@ -32,8 +30,8 @@ public final class ApiModule {
     return createApiClient(client, oauthInterceptor);
   }
 
-  @Provides @Singleton
-  Retrofit provideRetrofit(HttpUrl baseUrl, @Named("Api") OkHttpClient client, Moshi moshi) {
+  @Provides @Singleton Retrofit provideRetrofit(HttpUrl baseUrl, @Named("Api") OkHttpClient client,
+      Moshi moshi) {
     return new Retrofit.Builder() //
         .client(client) //
         .baseUrl(baseUrl) //

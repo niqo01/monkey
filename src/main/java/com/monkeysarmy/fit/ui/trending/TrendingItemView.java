@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.api.model.Repository;
 import com.monkeysarmy.fit.ui.misc.Truss;
 import com.monkeysarmy.fit.ui.transform.CircleStrokeTransformation;

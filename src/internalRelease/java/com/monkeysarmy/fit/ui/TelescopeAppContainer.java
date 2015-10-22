@@ -13,7 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.f2prateek.rx.preferences.Preference;
 import com.f2prateek.rx.preferences.RxSharedPreferences;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.LumberYard;
 import com.monkeysarmy.fit.ui.bugreport.BugReportLens;
 import com.mattprecious.telescope.Lens;

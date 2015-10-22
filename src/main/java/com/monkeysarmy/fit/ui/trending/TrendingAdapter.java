@@ -3,7 +3,7 @@ package com.monkeysarmy.fit.ui.trending;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.api.model.Repository;
 import com.squareup.picasso.Picasso;
 import java.util.Collections;

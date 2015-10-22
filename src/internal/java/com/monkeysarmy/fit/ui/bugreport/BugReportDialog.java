@@ -5,7 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 
 import static com.monkeysarmy.fit.ui.bugreport.BugReportView.Report;
 import static com.monkeysarmy.fit.ui.bugreport.BugReportView.ReportDetailsListener;

@@ -3,7 +3,7 @@ package com.monkeysarmy.fit.ui;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.Injector;
 import dagger.ObjectGraph;
 

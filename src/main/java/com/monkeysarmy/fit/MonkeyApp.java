@@ -3,7 +3,6 @@ package com.monkeysarmy.fit;
 import android.app.Application;
 import android.support.annotation.NonNull;
 import com.jakewharton.threetenabp.AndroidThreeTen;
-import com.jakewharton.u2020.BuildConfig;
 import com.monkeysarmy.fit.data.Injector;
 import com.monkeysarmy.fit.data.LumberYard;
 import com.monkeysarmy.fit.ui.ActivityHierarchyServer;

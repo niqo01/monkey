@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.ui.misc.EmptyTextWatcher;
 import com.monkeysarmy.fit.util.Strings;
 

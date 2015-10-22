@@ -2,7 +2,7 @@
 
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jakewharton.u2020">
+    package="com.monkeysarmy.fit">
 
   <uses-permission android:name="android.permission.INTERNET"/>
 

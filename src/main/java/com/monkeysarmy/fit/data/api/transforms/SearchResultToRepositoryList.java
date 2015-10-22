@@ -7,7 +7,8 @@ import java.util.List;
 import retrofit.Result;
 import rx.functions.Func1;
 
-public final class SearchResultToRepositoryList implements Func1<Result<RepositoriesResponse>, List<Repository>> {
+public final class SearchResultToRepositoryList
+    implements Func1<Result<RepositoriesResponse>, List<Repository>> {
   private static volatile SearchResultToRepositoryList instance;
 
   public static SearchResultToRepositoryList instance() {

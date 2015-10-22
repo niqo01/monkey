@@ -2,9 +2,12 @@ package com.googleapiclient;
 
 import android.content.Context;
 import com.google.android.gms.fitness.data.DataPoint;
+import com.google.android.gms.fitness.data.DataType;
 import com.google.android.gms.fitness.request.DataReadRequest;
 import com.google.android.gms.fitness.request.SensorRequest;
+import com.google.android.gms.fitness.result.DailyTotalResult;
 import com.google.android.gms.fitness.result.DataReadResult;
+import com.googleapiclient.observable.ReadDailyHistoryObservable;
 import com.googleapiclient.observable.ReadHistoryObservable;
 import com.googleapiclient.observable.SensorObservable;
 import rx.Observable;
@@ -22,5 +25,9 @@ public final class ReactiveFitnessProvider {
 
   public Observable<DataReadResult> readHistory(DataReadRequest dataReadRequest) {
     return ReadHistoryObservable.createObservable(ctx, dataReadRequest);
+  }
+
+  public Observable<DailyTotalResult> readDailyHistory(DataType dataType) {
+    return ReadDailyHistoryObservable.createObservable(ctx, dataType);
   }
 }

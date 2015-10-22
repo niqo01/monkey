@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.widget.Toast;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import java.util.List;
 
 import static android.widget.Toast.LENGTH_LONG;

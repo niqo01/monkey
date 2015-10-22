@@ -18,7 +18,7 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.BindColor;
 import butterknife.ButterKnife;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.Injector;
 import com.monkeysarmy.fit.data.api.oauth.OauthService;
 import dagger.ObjectGraph;
@@ -34,11 +34,13 @@ public final class MainActivity extends Activity {
   @BindColor(R.color.status_bar) int statusBarColor;
 
   @Inject AppContainer appContainer;
+  @Inject GoogleClientController googleClientController;
 
   private ObjectGraph activityGraph;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     LayoutInflater inflater = getLayoutInflater();
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -50,6 +52,8 @@ public final class MainActivity extends Activity {
     ObjectGraph appGraph = Injector.obtain(getApplication());
     appGraph.inject(this);
     activityGraph = appGraph.plus(new MainActivityModule(this));
+
+    googleClientController.onCreate(this, savedInstanceState);
 
     ViewGroup container = appContainer.bind(this);
 
@@ -78,7 +82,7 @@ public final class MainActivity extends Activity {
       return true;
     });
 
-    inflater.inflate(R.layout.trending_view, content);
+    inflater.inflate(R.layout.fit_view, content);
   }
 
   @Override public Object getSystemService(@NonNull String name) {
@@ -90,7 +94,18 @@ public final class MainActivity extends Activity {
 
   @Override protected void onDestroy() {
     activityGraph = null;
+    googleClientController.onDestroy();
     super.onDestroy();
+  }
+
+  @Override protected void onSaveInstanceState(Bundle outState) {
+    super.onSaveInstanceState(outState);
+    googleClientController.onSaveInstanceState(outState);
+  }
+
+  @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+    googleClientController.onActivityResult(requestCode, resultCode, data);
   }
 
   @Override protected void onNewIntent(Intent intent) {
@@ -106,8 +121,7 @@ public final class MainActivity extends Activity {
     }
   }
 
-  @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-  private static void setStatusBarColor(Window window) {
+  @TargetApi(Build.VERSION_CODES.LOLLIPOP) private static void setStatusBarColor(Window window) {
     window.setStatusBarColor(Color.TRANSPARENT);
   }
 }
