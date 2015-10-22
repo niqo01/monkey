@@ -59,7 +59,7 @@ android {
 
   signingConfigs {
     monkey {
-      storeFile file('monkey.keystore')
+      storeFile file('debug.keystore')
       storePassword 'android'
       keyAlias 'android'
       keyPassword 'android'
@@ -129,6 +129,8 @@ dependencies {
   compile 'com.android.support:appcompat-v7:23.1.0'
   compile 'com.android.support:recyclerview-v7:23.1.0'
   compile 'com.android.support:design:23.1.0'
+
+  compile 'com.google.android.gms:play-services-fitness:8.1.0'
 
   compile 'com.squareup.dagger:dagger:1.2.2'
   apt 'com.squareup.dagger:dagger-compiler:1.2.2'
