@@ -13,13 +13,13 @@ import javax.inject.Singleton;
         DataModule.class
     },
     injects = {
-        U2020App.class
+        MonkeyApp.class
     }
 )
 public final class U2020Module {
-  private final U2020App app;
+  private final MonkeyApp app;
 
-  public U2020Module(U2020App app) {
+  public U2020Module(MonkeyApp app) {
     this.app = app;
   }
 

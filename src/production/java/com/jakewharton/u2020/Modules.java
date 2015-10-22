@@ -1,7 +1,7 @@
 package com.jakewharton.u2020;
 
 final class Modules {
-  static Object[] list(U2020App app) {
+  static Object[] list(MonkeyApp app) {
     return new Object[] {
         new U2020Module(app)
     };

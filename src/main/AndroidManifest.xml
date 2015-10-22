@@ -11,7 +11,7 @@
       android:icon="@drawable/app_icon"
       android:label="@string/application_name"
       android:theme="@style/Theme.U2020"
-      android:name=".U2020App"
+      android:name=".MonkeyApp"
       >
     <activity
         android:name=".ui.MainActivity"
