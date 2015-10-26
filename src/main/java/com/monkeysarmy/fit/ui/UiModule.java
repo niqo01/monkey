@@ -9,14 +9,16 @@ import javax.inject.Singleton;
         MainActivity.class,
     },
     complete = false,
-    library = true
-)
-public final class UiModule {
+    library = true) public final class UiModule {
   @Provides @Singleton AppContainer provideAppContainer() {
     return AppContainer.DEFAULT;
   }
 
   @Provides @Singleton ActivityHierarchyServer provideActivityHierarchyServer() {
     return ActivityHierarchyServer.NONE;
+  }
+
+  @Provides @Singleton GoogleClientController provideGoogleClientController() {
+    return new GoogleClientController();
   }
 }

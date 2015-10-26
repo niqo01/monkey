@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Cheat by adding a trailing space to make the title and spinner look like one sentence. -->
+  <string name="fit_title">Monkey&#160;</string>
+
+
+  <string name="fit_empty_title">Weird…</string>
+  <string name="fit_empty_message">
+    There doesn\'t seem to be\nanything trending in this timespan.
+  </string>
+  <string name="fit_loading_message">loading</string>
+</resources>

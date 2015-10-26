@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.ui.misc.EnumAdapter;
 
 final class TrendingTimespanAdapter extends EnumAdapter<TrendingTimespan> {

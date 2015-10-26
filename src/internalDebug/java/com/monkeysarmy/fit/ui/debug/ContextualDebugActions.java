@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;

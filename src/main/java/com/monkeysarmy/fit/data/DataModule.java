@@ -25,9 +25,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 @Module(
     includes = ApiModule.class,
     complete = false,
-    library = true
-)
-public final class DataModule {
+    library = true) public final class DataModule {
   static final int DISK_CACHE_SIZE = (int) MEGABYTES.toBytes(50);
 
   @Provides @Singleton SharedPreferences provideSharedPreferences(Application app) {
@@ -38,15 +36,13 @@ public final class DataModule {
     return RxSharedPreferences.create(prefs);
   }
 
-  @Provides @Singleton @AccessToken
-  Preference<String> provideAccessToken(RxSharedPreferences prefs) {
+  @Provides @Singleton @AccessToken Preference<String> provideAccessToken(
+      RxSharedPreferences prefs) {
     return prefs.getString("access-token");
   }
 
   @Provides @Singleton Moshi provideMoshi() {
-    return new Moshi.Builder()
-        .add(new InstantAdapter())
-        .build();
+    return new Moshi.Builder().add(new InstantAdapter()).build();
   }
 
   @Provides @Singleton Clock provideClock() {
@@ -62,8 +58,7 @@ public final class DataModule {
   }
 
   @Provides @Singleton Picasso providePicasso(Application app, OkHttpClient client) {
-    return new Picasso.Builder(app)
-        .downloader(new OkHttpDownloader(client))
+    return new Picasso.Builder(app).downloader(new OkHttpDownloader(client))
         .listener((picasso, uri, e) -> Timber.e(e, "Failed to load image: %s", uri))
         .build();
   }

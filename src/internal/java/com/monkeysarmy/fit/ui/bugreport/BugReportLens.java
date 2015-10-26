@@ -7,7 +7,7 @@ import android.support.v4.app.ShareCompat;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
-import com.jakewharton.u2020.BuildConfig;
+import com.monkeysarmy.fit.BuildConfig;
 import com.monkeysarmy.fit.data.LumberYard;
 import com.monkeysarmy.fit.util.Intents;
 import com.monkeysarmy.fit.util.Strings;

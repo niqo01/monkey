@@ -21,8 +21,7 @@ import timber.log.Timber;
 
 import static org.threeten.bp.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 
-@Singleton
-public final class LumberYard {
+@Singleton public final class LumberYard {
   private static final int BUFFER_SIZE = 200;
 
   private final Application app;
@@ -59,7 +58,7 @@ public final class LumberYard {
     return entrySubject;
   }
 
-  /**  Save the current logs to disk. */
+  /** Save the current logs to disk. */
   public Observable<File> save() {
     return Observable.create(new Observable.OnSubscribe<File>() {
       @Override public void call(Subscriber<? super File> subscriber) {

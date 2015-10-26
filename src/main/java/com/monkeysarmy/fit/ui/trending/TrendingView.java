@@ -19,7 +19,7 @@ import butterknife.Bind;
 import butterknife.BindDimen;
 import butterknife.ButterKnife;
 import butterknife.OnItemSelected;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.Funcs;
 import com.monkeysarmy.fit.data.Injector;
 import com.monkeysarmy.fit.data.IntentFactory;
@@ -31,6 +31,7 @@ import com.monkeysarmy.fit.data.api.Sort;
 import com.monkeysarmy.fit.data.api.model.RepositoriesResponse;
 import com.monkeysarmy.fit.data.api.model.Repository;
 import com.monkeysarmy.fit.data.api.transforms.SearchResultToRepositoryList;
+import com.monkeysarmy.fit.ui.GoogleClientController;
 import com.monkeysarmy.fit.ui.misc.BetterViewAnimator;
 import com.monkeysarmy.fit.ui.misc.DividerItemDecoration;
 import com.monkeysarmy.fit.ui.misc.EnumAdapter;
@@ -64,6 +65,7 @@ public final class TrendingView extends LinearLayout
   @Inject Picasso picasso;
   @Inject IntentFactory intentFactory;
   @Inject DrawerLayout drawerLayout;
+  @Inject GoogleClientController googleClientController;
 
   private final PublishSubject<TrendingTimespan> timespanSubject;
   private final EnumAdapter<TrendingTimespan> timespanAdapter;
@@ -145,18 +147,19 @@ public final class TrendingView extends LinearLayout
         }
       };
 
-  private final Action1<Result<RepositoriesResponse>> trendingError = new Action1<Result<RepositoriesResponse>>() {
-    @Override public void call(Result<RepositoriesResponse> result) {
-      if (result.isError()) {
-        Timber.e(result.error(), "Failed to get trending repositories");
-      } else {
-        Response<RepositoriesResponse> response = result.response();
-        Timber.e("Failed to get trending repositories. Server returned " + response.code());
-      }
-      swipeRefreshView.setRefreshing(false);
-      animatorView.setDisplayedChildId(R.id.trending_error);
-    }
-  };
+  private final Action1<Result<RepositoriesResponse>> trendingError =
+      new Action1<Result<RepositoriesResponse>>() {
+        @Override public void call(Result<RepositoriesResponse> result) {
+          if (result.isError()) {
+            Timber.e(result.error(), "Failed to get trending repositories");
+          } else {
+            Response<RepositoriesResponse> response = result.response();
+            Timber.e("Failed to get trending repositories. Server returned " + response.code());
+          }
+          swipeRefreshView.setRefreshing(false);
+          animatorView.setDisplayedChildId(R.id.trending_error);
+        }
+      };
 
   @Override protected void onDetachedFromWindow() {
     super.onDetachedFromWindow();

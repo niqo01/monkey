@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
 import com.f2prateek.rx.preferences.Preference;
 import com.jakewharton.madge.MadgeFrameLayout;
 import com.jakewharton.scalpel.ScalpelFrameLayout;
-import com.jakewharton.u2020.R;
+import com.monkeysarmy.fit.R;
 import com.monkeysarmy.fit.data.LumberYard;
 import com.monkeysarmy.fit.data.PixelGridEnabled;
 import com.monkeysarmy.fit.data.PixelRatioEnabled;
