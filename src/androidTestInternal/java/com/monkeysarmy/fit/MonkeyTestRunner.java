@@ -11,16 +11,16 @@ import static android.os.PowerManager.ACQUIRE_CAUSES_WAKEUP;
 import static android.os.PowerManager.FULL_WAKE_LOCK;
 import static android.os.PowerManager.ON_AFTER_RELEASE;
 
-public final class U2020TestRunner extends AndroidJUnitRunner {
+public final class MonkeyTestRunner extends AndroidJUnitRunner {
   private PowerManager.WakeLock wakeLock;
 
   @Override public void onStart() {
     // Inform the app we are an instrumentation test before the object graph is initialized.
-    DebugU2020Module.instrumentationTest = true;
+    DebugMonkeyModule.instrumentationTest = true;
 
     Context app = getTargetContext().getApplicationContext();
 
-    String name = U2020TestRunner.class.getSimpleName();
+    String name = MonkeyTestRunner.class.getSimpleName();
     // Unlock the device so that the tests can input keystrokes.
     KeyguardManager keyguard = (KeyguardManager) app.getSystemService(KEYGUARD_SERVICE);
     keyguard.newKeyguardLock(name).disableKeyguard();

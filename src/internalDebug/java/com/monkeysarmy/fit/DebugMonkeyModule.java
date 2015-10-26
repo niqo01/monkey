@@ -7,7 +7,7 @@ import dagger.Provides;
 import javax.inject.Singleton;
 
 @Module(
-    addsTo = U2020Module.class,
+    addsTo = MonkeyModule.class,
     includes = {
         DebugUiModule.class,
         DebugDataModule.class,
@@ -15,7 +15,7 @@ import javax.inject.Singleton;
     },
     overrides = true
 )
-public final class DebugU2020Module {
+public final class DebugMonkeyModule {
   // Low-tech flag to force certain debug build behaviors when running in an instrumentation test.
   // This value is used in the creation of singletons so it must be set before the graph is created.
   static boolean instrumentationTest = false;

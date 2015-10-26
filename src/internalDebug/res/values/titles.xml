@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="application_name">U+2020 Sample Internal Debug</string>
-  <string name="launcher_name">U+2020 Internal (D)</string>
+  <string name="application_name">Monkey Internal Debug</string>
+  <string name="launcher_name">Monkey Internal (D)</string>
 </resources>

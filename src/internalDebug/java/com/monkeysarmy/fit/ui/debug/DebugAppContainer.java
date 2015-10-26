@@ -76,7 +76,7 @@ public final class DebugAppContainer implements AppContainer {
     final ViewHolder viewHolder = new ViewHolder();
     ButterKnife.bind(viewHolder, activity);
 
-    final Context drawerContext = new ContextThemeWrapper(activity, R.style.Theme_U2020_Debug);
+    final Context drawerContext = new ContextThemeWrapper(activity, R.style.Theme_Monkey_Debug);
     final DebugView debugView = new DebugView(drawerContext);
     viewHolder.debugDrawer.addView(debugView);
 

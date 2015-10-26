@@ -80,7 +80,7 @@ public final class TrendingView extends LinearLayout
 
     timespanSubject = PublishSubject.create();
     timespanAdapter = new TrendingTimespanAdapter(
-        new ContextThemeWrapper(getContext(), R.style.Theme_U2020_TrendingTimespan));
+        new ContextThemeWrapper(getContext(), R.style.Theme_Monkey_TrendingTimespan));
     trendingAdapter = new TrendingAdapter(picasso, this);
   }
 

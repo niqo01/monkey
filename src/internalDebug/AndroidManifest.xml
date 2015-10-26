@@ -13,7 +13,7 @@
         android:name="com.monkeysarmy.fit.ui.DebugActivity"
         android:label="U+2020 Dev Settings"
         android:launchMode="singleTask"
-        android:theme="@style/Theme.U2020.Debug"
+        android:theme="@style/Theme.Monkey.Debug"
         android:screenOrientation="portrait"
         android:icon="@drawable/dev_app_icon"
         >
@@ -24,7 +24,7 @@
     </activity>
     <activity
         android:name="com.monkeysarmy.fit.ui.ExternalIntentActivity"
-        android:theme="@style/Theme.U2020.External"
+        android:theme="@style/Theme.Monkey.External"
         >
       <intent-filter>
         <action android:name="com.jakewharton.u2020.intent.EXTERNAL_INTENT"/>
