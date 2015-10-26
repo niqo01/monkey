@@ -383,7 +383,7 @@ public final class DebugView extends FrameLayout {
   }
 
   @OnClick(R.id.debug_logs_show) void showLogs() {
-    new LogsDialog(new ContextThemeWrapper(getContext(), R.style.Theme_U2020), lumberYard).show();
+    new LogsDialog(new ContextThemeWrapper(getContext(), R.style.Theme_Monkey), lumberYard).show();
   }
 
   private void setupBuildSection() {

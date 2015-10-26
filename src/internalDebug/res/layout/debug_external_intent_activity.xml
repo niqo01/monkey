@@ -23,7 +23,7 @@
         />
 
     <TextView
-        style="@style/Widget.U2020.ExternalIntent.Header"
+        style="@style/Widget.Monkey.ExternalIntent.Header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Action:"
@@ -31,13 +31,13 @@
         />
     <TextView
         android:id="@+id/action"
-        style="@style/Widget.U2020.ExternalIntent.Body"
+        style="@style/Widget.Monkey.ExternalIntent.Body"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         />
 
     <TextView
-        style="@style/Widget.U2020.ExternalIntent.Header"
+        style="@style/Widget.Monkey.ExternalIntent.Header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Data:"
@@ -45,13 +45,13 @@
         />
     <TextView
         android:id="@+id/data"
-        style="@style/Widget.U2020.ExternalIntent.Body"
+        style="@style/Widget.Monkey.ExternalIntent.Body"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         />
 
     <TextView
-        style="@style/Widget.U2020.ExternalIntent.Header"
+        style="@style/Widget.Monkey.ExternalIntent.Header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Extras:"
@@ -59,13 +59,13 @@
         />
     <TextView
         android:id="@+id/extras"
-        style="@style/Widget.U2020.ExternalIntent.Body"
+        style="@style/Widget.Monkey.ExternalIntent.Body"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         />
 
     <TextView
-        style="@style/Widget.U2020.ExternalIntent.Header"
+        style="@style/Widget.Monkey.ExternalIntent.Header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Flags:"
@@ -73,7 +73,7 @@
         />
     <TextView
         android:id="@+id/flags"
-        style="@style/Widget.U2020.ExternalIntent.Body"
+        style="@style/Widget.Monkey.ExternalIntent.Body"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         />

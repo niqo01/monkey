@@ -10,7 +10,7 @@
       android:allowBackup="true"
       android:icon="@drawable/app_icon"
       android:label="@string/application_name"
-      android:theme="@style/Theme.U2020"
+      android:theme="@style/Theme.Monkey"
       android:name="com.monkeysarmy.fit.MonkeyApp"
       >
     <activity

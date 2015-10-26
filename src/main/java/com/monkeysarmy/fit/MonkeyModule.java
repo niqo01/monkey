@@ -15,10 +15,10 @@ import javax.inject.Singleton;
     injects = {
         MonkeyApp.class
     },
-    library = true) public final class U2020Module {
+    library = true) public final class MonkeyModule {
   private final MonkeyApp app;
 
-  public U2020Module(MonkeyApp app) {
+  public MonkeyModule(MonkeyApp app) {
     this.app = app;
   }
 
